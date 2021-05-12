@@ -9,11 +9,14 @@
 <hr>
 <h2>Update:</h2>
 <form action="/posts/update/{{post.id}}" method="POST">
-    Title: <input type="text" name="title" id="title" value={{post.title}}>
+    <label for="title">Title:</label>
+    <input class="form-control" type="text" name="title" id="title" value="{{ post.title }}" aria-label="Enter Title">
     <br>
-    Author: <input type="text" name="author" id="author" value={{post.author}}>
+    <label for="author">Author:</label>
+    <input class="form-control" type="text" name="author" id="author" value="{{ post.author }}" aria-label="Enter Author">
     <br>
-    Post: <input type="text" name="content" id="content" value={{post.content}}>
+    <label for="content">Post:</label>
+    <textarea class="form-control" name='content' id="content"  aria-label="Enter Content" rows="3">{{ post.content }}</textarea>
     <br>
     <input type="submit" value="Save">
 </form>
